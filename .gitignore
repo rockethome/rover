@@ -112,7 +112,6 @@ redhat-release
 resolv.conf
 rpc
 rpm/
-rsyslog.conf
 rwtab
 sasl2/
 securetty
