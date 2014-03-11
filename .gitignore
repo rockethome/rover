@@ -136,7 +136,6 @@ statetab
 sudo-ldap.conf
 sudo.conf
 sudoers
-sysconfig/
 sysctl.conf
 system-release
 system-release-cpe
