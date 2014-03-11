@@ -74,7 +74,6 @@ motd
 mtab
 my.cnf
 networks
-nginx/
 nsswitch.conf
 openldap/
 pam.d/
