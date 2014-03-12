@@ -4,10 +4,12 @@
 IP=$(echo $SSH_CONNECTION | cut -d " " -f 1)
 TIMESTAMP=$(date +%s)
 HOSTNAME=$(hostname -f)
-SSH_LOGIN_TARGET="cupcake.zyp.io"
+#SSH_LOGIN_TARGET="cupcake.zyp.io"
 
 # Logger Entry
 logger -t SSH Login for $USER from $IP
 
-# cURL Request
-curl -m 8 -X POST -H "Content-Type: application/json" -d "{\"user\":${USER},\"ip\":${IP},\"host\":${HOSTNAME},\"timestamp\":${TIMESTAMP}}" $SSH_LOGIN_TARGET
+if [[ -n "$SSH_LOGIN_TARGET" ]]; then
+    # cURL Request
+    curl -m 8 -X POST -H "Content-Type: application/json" -d "{\"user\":${USER},\"ip\":${IP},\"host\":${HOSTNAME},\"timestamp\":${TIMESTAMP}}" $SSH_LOGIN_TARGET
+fi
