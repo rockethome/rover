@@ -5,6 +5,9 @@ DIR_COLORS.lightbgcolor
 GeoIP.conf
 GeoIP.conf.default
 NetworkManager/
+nginx/
+sysconfig/
+wgetrc
 X11/
 adjtime
 aliases
